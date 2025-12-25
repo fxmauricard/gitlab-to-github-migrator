@@ -1,2 +1,2 @@
-# gitlab-to-github-migrator
-A simple tool that migrate GitLab repositories (labels, milestones, issues) to GitHub.
+# GitLabToGitHubMigrator
+A simple tool made in .NET 9.0 (C#) that migrates GitLab repositories (labels, milestones, issues) to GitHub using GitLab and GitHub APIs.
