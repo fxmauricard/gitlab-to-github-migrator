@@ -20,7 +20,7 @@ GitLabToGitHubMigrator is a .NET 9.0 console application that migrates GitLab re
 - **Run tests**: `dotnet test`
 - **Restore dependencies**: `dotnet restore` or `msbuild /t:Restore`
 
-The project uses both dotnet CLI and MSBuild. The CI workflow in `.github/workflows/dotnet-desktop.yml` runs on Windows and executes tests and restoration using both tools.
+The project supports both dotnet CLI and MSBuild. The CI workflow in `.github/workflows/dotnet-desktop.yml` runs on Windows, uses `dotnet test` for testing, and uses `msbuild` for restoration.
 
 ## Project Structure
 
