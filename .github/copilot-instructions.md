@@ -18,7 +18,7 @@ GitLabToGitHubMigrator is a .NET 9.0 console application that migrates GitLab re
 - **Build the project**: `dotnet build`
 - **Run the application**: `dotnet run`
 - **Run tests**: `dotnet test`
-- **Restore dependencies**: `dotnet restore` or `msbuild /t:Restore`
+- **Restore dependencies**: `dotnet restore` or `msbuild GitLabToGitHubMigrator.sln /t:Restore`
 
 The project supports both dotnet CLI and MSBuild. The CI workflow in `.github/workflows/dotnet-desktop.yml` runs on Windows, uses `dotnet test` for testing, and uses `msbuild` for restoration.
 
@@ -30,7 +30,7 @@ The project supports both dotnet CLI and MSBuild. The CI workflow in `.github/wo
 - `GitLabManager.cs` - Handles all GitLab API interactions
 - `GitHubManager.cs` - Handles all GitHub API interactions, including retry logic and rate limit handling
 - `GitLabToGitHubMigrator.csproj` - Project configuration file
-- `global.json` - SDK version configuration (v9.0.0)
+- `global.json` - SDK version configuration (9.0.0)
 
 ## Coding Conventions and Style
 
@@ -71,7 +71,7 @@ The project supports both dotnet CLI and MSBuild. The CI workflow in `.github/wo
 - Format output consistently:
   - `[ItemType]` for section headers
   - `ItemType: [ItemName]` for individual items
-  - `\tCreation GitHub : ` followed by status indicators:
+  - Tab character followed by `Creation GitHub : ` and status indicators:
     - `OK.` for successful label/milestone creation
     - `OK` for successful issue creation (without period)
     - `KO ! (error message)` for failures
