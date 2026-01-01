@@ -69,7 +69,11 @@ The project uses MSBuild and is configured in the `.github/workflows/dotnet-desk
 - Format output consistently:
   - `[ItemType]` for section headers
   - `ItemType: [ItemName]` for individual items
-  - `\tCreation GitHub : OK.` or `\tCreation GitHub : KO !` for status
+  - `\tCreation GitHub : ` followed by status indicators:
+    - `OK.` for successful label/milestone creation
+    - `OK` for successful issue creation (without period)
+    - `KO ! (error message)` for failures
+    - `-` for null results
 
 ## Configuration
 
