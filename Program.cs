@@ -45,7 +45,8 @@ internal static class Application
     /// </summary>
     private static void DisplayConfiguration()
     {
-        Console.WriteLine("GitLabToGitHubMigrator");
+        var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version?.ToString() ?? "Unknown";
+        Console.WriteLine($"GitLabToGitHubMigrator v{version}");
         Console.WriteLine();
         Console.WriteLine("Configuration:");
         Console.WriteLine($"* GITLAB_URL: {GitLabUrl}");
